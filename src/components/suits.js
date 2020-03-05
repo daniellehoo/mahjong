@@ -15,9 +15,15 @@ function Suits() {
 
   return (
     <div className="landing">
-      <h1>Mahjong</h1>
+      <Link to={"/mahjong"}>
+        <h1>Mahjong</h1>
+      </Link>
       {suitArray.map(suits => {
-        return <h2 className="suits">{suits}</h2>;
+        return (
+          <Link to={`${suits}`.toLowerCase()}>
+            <h2 className="suits">{suits}</h2>
+          </Link>
+        );
       })}
     </div>
   );
