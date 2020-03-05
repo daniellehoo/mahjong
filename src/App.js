@@ -16,7 +16,7 @@ function App() {
     <div className="App">
       <Router>
         <Switch>
-          <Route path="/:id" children={<Child />} />
+          {/* <Route path="/:id" children={<Child />} /> */}
           <Route path="/" children={<Main />} />
         </Switch>
       </Router>
