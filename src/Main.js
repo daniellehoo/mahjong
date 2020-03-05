@@ -5,22 +5,8 @@ import "./App.css";
 import { BrowserRouter as Router, Link, useParams } from "react-router-dom";
 
 function Main() {
-  const [board, setBoard] = useState("one two three");
-  const [selected, setSelected] = useState([]);
   return (
     <div>
-      {/* {board.split(" ").map((id, index) => {
-        return (
-          <Card
-            id={id}
-            selected={selected[index]}
-            callBack={() => {
-              selected[index] = !selected[index];
-              setSelected(selected.slice());
-            }}
-          />
-        );
-      })} */}
       <Data />
     </div>
   );
@@ -88,9 +74,32 @@ function Data() {
 
   return (
     <div className="allCards">
+      <Link to='/'><h3>Home, yo</h3></Link>
       {allCardsArray.map((element, index) => {
         return <h1>{element}</h1>;
       })}
+      <Suit/>
+    </div>
+  );
+}
+
+function Suit() {
+  // We can use the `useParams` hook here to access
+  // the dynamic pieces of the URL.
+  let { id } = useParams();
+  let suits = [];
+  data.map(item => {
+    suits.push(item.tile)
+  })
+  console.log(suits)
+  // let card = suits.find(item => item.id == id);
+  return (
+    <div className="suitPage">
+      <h1>{id}</h1>
+      <h2>
+        {/* {card.tile} */}
+        <Link to="/">Home</Link>
+      </h2>
     </div>
   );
 }

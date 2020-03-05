@@ -1,5 +1,23 @@
+body {
+  /* background-color: black;; */
+}
+
 .App {
   display: flex;
+}
+
+.landing {
+  margin: 2.5% auto;
+}
+
+.landing h1, h2 {
+  font-size: 6rem;
+  margin: .5rem 0;
+  /* color: white; */
+}
+
+h1:hover, h2:hover {
+  color: blue;
 }
 
 .allCards h1 {
@@ -10,7 +28,7 @@
 }
 
 .allCards h1:hover {
-  color: red;
+  color: blue;
 }
 
 .allCards {
