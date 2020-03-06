@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import {Main, Child} from "./Main.js";
+import {Main, Child, Suit} from "./Main.js";
 import Suits from "./components/suits.js"
 import "./App.css";
 import {
@@ -15,8 +15,8 @@ function App() {
     <div className="App">
       <Router>
         <Switch>
-          {/* <Route path="/:id" children={<Child />} /> */}
           <Route path="/mahjong" children={<Main/>} />
+          <Route path="/:id" children={<Suit />} />
           <Route path="/" children={<Suits/>} />
         </Switch>
       </Router>

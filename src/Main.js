@@ -78,7 +78,6 @@ function Data() {
       {allCardsArray.map((element, index) => {
         return <h1>{element}</h1>;
       })}
-      <Suit/>
     </div>
   );
 }
@@ -88,20 +87,22 @@ function Suit() {
   // the dynamic pieces of the URL.
   let { id } = useParams();
   let suits = [];
+  let garbageCollector = [];
   data.map(item => {
-    suits.push(item.tile)
+    console.log(item)
+    item.suit.toLowerCase() == id ? suits.push(item.tile) : garbageCollector.push('');
   })
   console.log(suits)
   // let card = suits.find(item => item.id == id);
   return (
     <div className="suitPage">
+        <Link to="/">Home</Link>
       <h1>{id}</h1>
       <h2>
-        {/* {card.tile} */}
-        <Link to="/">Home</Link>
+        {suits}
       </h2>
     </div>
   );
 }
 
-export { Main };
+export { Main, Suit };
