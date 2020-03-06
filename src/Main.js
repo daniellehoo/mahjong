@@ -74,7 +74,7 @@ function Data() {
 
   return (
     <div className="allCards">
-      <Link to='/'><h3>Home, yo</h3></Link>
+      <Link to='/'><h3>Home</h3></Link>
       {allCardsArray.map((element, index) => {
         return <h1>{element}</h1>;
       })}
@@ -89,15 +89,13 @@ function Suit() {
   let suits = [];
   let garbageCollector = [];
   data.map(item => {
-    console.log(item)
     item.suit.toLowerCase() == id ? suits.push(item.tile) : garbageCollector.push('');
   })
-  console.log(suits)
   // let card = suits.find(item => item.id == id);
   return (
     <div className="suitPage">
         <Link to="/">Home</Link>
-      <h1>{id}</h1>
+      <h1>{id.charAt(0).toUpperCase() + id.slice(1)}</h1>
       <h2>
         {suits}
       </h2>

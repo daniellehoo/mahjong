@@ -12,15 +12,19 @@ body {
 
 .landing h1, h2 {
   font-size: 6rem;
-  margin: .5rem 0;
-  /* color: white; */
+  margin: .5rem;
 }
 
 h1:hover, h2:hover {
   color: blue;
 }
+a {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 1rem;
+}
 
-.allCards h1 {
+.allCards h1, .suitPage h1, .suitPage h2  {
   font-size: 6rem;
   color:black;
   font-weight: 400;
