@@ -90,15 +90,17 @@ function Suit() {
   let garbageCollector = [];
   data.map(item => {
     item.suit.toLowerCase() == id ? suits.push(item.tile) : garbageCollector.push('');
+    console.log(suits)
   })
   // let card = suits.find(item => item.id == id);
   return (
     <div className="suitPage">
         <Link to="/">Home</Link>
       <h1>{id.charAt(0).toUpperCase() + id.slice(1)}</h1>
-      <h2>
-        {suits}
-      </h2>
+      {suits.map(item => {
+        return (<h2>{item}</h2>)
+      })}
+    
     </div>
   );
 }

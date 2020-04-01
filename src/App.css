@@ -1,3 +1,5 @@
+/* ++++++++++++++++++++++++++ Main ++++++++++++++++++++++++++++++ */
+
 body {
   /* background-color: black;; */
 }
@@ -5,6 +7,14 @@ body {
 .App {
   display: flex;
 }
+
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+/* ++++++++++++++++++++++++++ Landing ++++++++++++++++++++++++++++++ */
 
 .landing {
   margin: 2.5% auto;
@@ -18,11 +28,9 @@ body {
 h1:hover, h2:hover {
   color: blue;
 }
-a {
-  font-size: 2rem;
-  font-weight: 700;
-  margin: 1rem;
-}
+
+/* ++++++++++++++++++++++++++ All Cards ++++++++++++++++++++++++++++++ */
+
 
 .allCards h1, .suitPage h1, .suitPage h2  {
   font-size: 6rem;
@@ -40,6 +48,26 @@ a {
   align-content: flex-start;
   flex-wrap: wrap;
   flex-direction: row;
+}
+
+/* ++++++++++++++++++++++++++ Suit Page ++++++++++++++++++++++++++++++ */
+
+.suitPage a {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin: 4rem 2rem;
+  padding: 1rem;
+  color: black;
+  text-decoration: none;
+} 
+
+.suitPage h2 {
+  display: inline-flex;
+  margin: 0;
+}
+
+.suitPage h2:hover {
+  color: blue;
 }
 
 .card {
@@ -76,18 +104,4 @@ input {
   padding: 1rem;
   width: 30%;
   align-self: center;
-}
-
-img {
-  width: 100px;
-}
-
-li {
-  list-style-type: none;
-  margin: 2rem 0;
-}
-
-a {
-  color: black;
-  text-decoration: none;
 }
